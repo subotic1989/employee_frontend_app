@@ -1,0 +1,30 @@
+@import "../../../styles";
+
+.navbar {
+  padding: 20px;
+  background-color: $primary;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  &__nav {
+    display: flex;
+
+    .nav__item {
+      list-style: none;
+      padding: 5px;
+      margin-left: 20px;
+
+      &--link {
+        cursor: pointer;
+        color: #fff;
+        font-size: clamp(20px, 2vw, 28px);
+        text-decoration: none;
+        font-weight: 100;
+      }
+    }
+  }
+
+  .active {
+    font-weight: 900;
+    color: $base;
+  }
+}

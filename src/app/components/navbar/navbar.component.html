@@ -1,0 +1,23 @@
+<nav class="navbar">
+  <ul class="navbar__nav">
+    <!-- employee -->
+    <li class="nav__item">
+      <a
+        class="nav__item--link"
+        [routerLink]="['employee-list']"
+        routerLinkActive="active"
+        >Employee</a
+      >
+    </li>
+
+    <!-- add employee -->
+    <li class="nav__item">
+      <a
+        class="nav__item--link"
+        [routerLink]="['employee-add']"
+        routerLinkActive="active"
+        >Add Employee
+      </a>
+    </li>
+  </ul>
+</nav>

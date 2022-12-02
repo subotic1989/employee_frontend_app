@@ -1,0 +1,5 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/02152c5d-f4c9-41ff-beff-1c8f3903e228/AppServices/subscriptions/02152c5d-f4c9-41ff-beff-1c8f3903e228/resourceGroups/employeeGuidNew_group/providers/Microsoft.Web/sites/employeeGuidNewUI",
+  "appService.deploySubpath": "dist",
+  "appService.showBuildDuringDeployPrompt": false
+}

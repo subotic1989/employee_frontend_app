@@ -1,0 +1,49 @@
+<div class="container">
+  <!-- LOADING -->
+  <div
+    class="container__loading"
+    *ngIf="(employeesArray$ | async)?.length == 0 && (isLoading$ | async)"
+  >
+    <app-loading></app-loading>
+  </div>
+
+  <!-- TABLE EMPTY -->
+  <div
+    class="container__empty"
+    *ngIf="(employeesArray$ | async)?.length == 0 && !(isLoading$ | async)"
+  >
+    <h2 class="container__empty--title">Employee table is empty!</h2>
+  </div>
+
+  <!-- TABLE -->
+  <table class="table" *ngIf="(employeesArray$ | async)?.length !== 0">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Department</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let employee of employeesArray$ | async; let i = index">
+        <td>{{ i + 1 }}.</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.email }}</td>
+        <td>{{ employee.phone }}</td>
+        <td>{{ employee.department }}</td>
+        <td>
+          <button
+            class="table__btn"
+            [routerLink]="['/employee-edit', employee.id]"
+          >
+            View
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

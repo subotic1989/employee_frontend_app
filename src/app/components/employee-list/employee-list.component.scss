@@ -1,0 +1,61 @@
+@import "../../../styles";
+
+.container {
+  height: 100%;
+  padding: 40px;
+  overflow: auto;
+
+  &__loading {
+    height: 50vh;
+  }
+
+  &__empty {
+    display: flex;
+    justify-content: center;
+
+    &--title {
+      color: $base;
+    }
+  }
+
+  .table {
+    margin: auto;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 1220px;
+    text-align: center;
+
+    th {
+      font-size: 18px;
+      padding: 10px 20px;
+      color: $primary-dark;
+      background-color: $primary-light;
+    }
+
+    tbody tr:hover {
+      transition: 0.2s;
+      background-color: $primary-light;
+    }
+
+    td {
+      padding: 10px;
+      color: $base;
+      background-color: $primary-background;
+    }
+
+    &__btn {
+      cursor: pointer;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: 0.2s;
+      color: $base-light;
+      background-color: $primary;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.2s;
+      }
+    }
+  }
+}

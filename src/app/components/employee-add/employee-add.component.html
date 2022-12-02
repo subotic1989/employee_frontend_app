@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="employee">
+    <!-- title -->
+    <h3 class="employee__title">
+      {{ employeeId ? "Edit" : "Add New" }} Employee
+    </h3>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <!-- name -->
+      <div class="employee__input">
+        <label for="name">Name: </label>
+        <input type="text" id="name" formControlName="name" />
+      </div>
+
+      <!-- email -->
+      <div class="employee__input">
+        <label for="email">Email: </label>
+        <input type="text" id="email" formControlName="email" />
+      </div>
+
+      <!-- phone -->
+      <div class="employee__input">
+        <label for="phone">Phone: </label>
+        <input type="text" id="phone" formControlName="phone" />
+      </div>
+
+      <!-- department -->
+      <div class="employee__input">
+        <label for="department">Department: </label>
+        <input type="text" id="department" formControlName="department" />
+      </div>
+
+      <!-- buttons  -->
+      <div class="employee__buttons">
+        <button [type]="'submit'" [disabled]="!form.valid">
+          {{ employeeId ? "Save" : "Add New" }}
+        </button>
+
+        <button type="button" (click)="onDelete()" *ngIf="employeeId">
+          Delete
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
